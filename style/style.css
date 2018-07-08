@@ -1,0 +1,60 @@
+html {
+    font-size: 20px;
+  }
+  
+  .panel-title {
+    font-size: xx-large;
+  }
+  .panel {
+    background: #333333;
+    border: solid white;
+  }
+  
+  .results {
+    font-size: 1em;
+    color: #FFFFFF;
+  }
+  
+  .dropdown {
+    margin-bottom: 50px;
+  }
+  
+  .inline-block {
+    display: inline-block;
+  }
+  
+  .center {
+    width: 90%;
+    margin: 0 auto 30px;
+  }
+  .btn-primary{
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    
+  }
+  .parent{
+    display: flex;
+    
+  }
+  .two{
+  
+    background-color:#337ab7;
+    column-width: 230px;
+    padding-left: 25em;
+    margin-left: 6em;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 40px 20px;  
+    color: white;
+    text-align: left;
+  
+  }
+  
+  #From{
+      width: 30em;
+  }
+  #To{
+    width: 30em;  
+  }

@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+
+<head>
+  <title>Currency Converter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Just in case server doesn't handle trailing -->
+  <link rel="canonical" href="https://chulacode.github.io/Currency_Converter/" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link href="styling.css" rel="stylesheet">
+  <!-- Javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/error.css">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="menu navbar-default navbar-menu">
+    <div class="container">
+      <div class="menu-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <p class="navbar-brand">Online-Offline Currency Converter Application </p>
+      </div>
+
+    </div>
+  </nav>
+  <!-- End of navbar-->
+  <br>
+  <br>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-primary text-center">
+          <div class="panel-heading">
+            <h2 class="panel-title">Currency Converter</h2>
+          </div>
+          <div class="error">
+            Please enter numeric value
+          </div>
+          <div class="panel-body">
+            <form class="form-vertical">
+
+              <div class="form-group center">
+                <label for="">Enter Value:</label>
+                <input type="number" name="value" id="fromAmount" class="amount form-control" placeholder="Enter value" min="1">
+              </div>
+              <div class="form-group inline-block">
+                <label for="">From currency:</label>
+                <select name="From" id="From" class="currency-list form-control ">
+                  <option> Convert From </option>
+                </select>
+              </div><br>
+
+              <div class="form-group inline-block">
+                <label>To currency:</label>
+                <select name="To" id="To" class="currency-list form-control">
+                  <option> Convert To </option>
+                  <option> </option>
+                </select>
+              </div>
+              <br>
+              <br>
+              <div class="parent">
+                <div class="one">
+                  <button type="button" name="button" id="clickMe" class="btn btn-primary pull-left" onclick="convertCurrency();">Convert</button>
+                </div>
+                <div class="two" id="toAmount"value="toAmount">Result:</div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+   if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+    .then(function(Registration){
+      console.log("Service worker registered succesfully!")
+    }).catch(function(err){
+console.log("Registration failed!!",err)
+    })
+  }
+    
+    // --- Application code here ---
+    </script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="text-center">© Designed by Ochulaobari Emmanuel
+        <a href=""></a>
+      </p>
+    </div>
+    </div>
+  </footer>
+  <!-- End of Footer -->
+  <script src="js/index.js"></script>
+  <script src="sw.js"></script>
+  <script src="js/idb.js"></script>
+  <script scr="js/db.js"></script>
+ 
+
+</body>
+
+</html>
